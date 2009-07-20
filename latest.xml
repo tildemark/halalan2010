@@ -3,7 +3,7 @@
   <ModulePrefs
 title="Halalan News"
 directory_title="Halalan News"
-title_url="http://halalan2010.googlecode.com/"
+title_url="http://www.ppcrv.org/"
 description="2010 Philippine National Elections"
 author="Tildemark"
 author_affiliation="PPCRV"
@@ -63,6 +63,15 @@ category="news">
   <Content type="html">
 
      <![CDATA[ 
+     <style type="text/css">
+     #news-title {
+       font-size: 10px;
+       font-width: bold;
+     }
+     #search-control {
+       font-size: 10px;
+     }
+		</style>
 		<script src="http://www.google.com/jsapi?key=ABQIAAAALdPZknikp68JRKPSzmMLehRKnc5teGLG99lMmU39x6OLP16D9RR3AMp8BHfCEZFYjnzEALG4JUDatQ" type="text/javascript"></script>
 		<script language="Javascript" type="text/javascript">
 		google.load("search", "1");
@@ -85,8 +94,8 @@ category="news">
       }
       google.setOnLoadCallback(OnLoad, true);
     </script>
-    <div style="text-align: center; color=#676767; margin-bottom: 8px;">
-      <a href="http://www.ppcrv.org/page/index.htm"><span style="color:#676767; cursor: pointer; text-decoration: underline;">Latest update on the 2010 Philippine Elections</span></a>
+    <div id="news-title" style="text-align: center; color=#676767; margin-bottom: 8px;">
+      <a href="http://www.ppcrv.org/page/index.htm"><span style="color:#676767; cursor: pointer; text-decoration: underline;">Latest updates on the 2010 Philippine Elections</span></a>
     </div>
     <div class="search-control" id="search_control_tabbed">Fetching News</div>
 
