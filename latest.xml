@@ -86,12 +86,11 @@ category="news">
         tabbed.execute("Ferrari Enzo");
       }
       google.setOnLoadCallback(OnLoad, true);
-    //]]>
     </script>
+    //]]>
     <div style="text-align: right; color=#676767; margin-bottom: 8px;">
       <a href="http://code.google.com/apis/ajaxsearch/index.html"><span style="color:#676767; cursor: pointer; text-decoration: underline;">Google AJAX Search API Documentation</span></a>
     </div>
     <div class="search-control" id="search_control_tabbed">Loading</div>
-
   </Content> 
 </Module>
