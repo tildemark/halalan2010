@@ -59,17 +59,19 @@ category="news">
 <Locale lang="zh-CN" messages="ajaxsearch_content/zh-cn.xml"/>
 <Locale lang="zh-TW" messages="ajaxsearch_content/zh-tw.xml"/>
 </ModulePrefs>
+<UserPref name="title" display_name="Halalan News" default_value="Halalan News"/>
+<UserPref name="tabFontSize" display_name="Tab Font Size" default_value="0.7em"/>
 
   <Content type="html">
 
      <![CDATA[ 
      <style type="text/css">
      #news-title {
-       font-size: 10px;
+       font-size: 0.8em;
        font-width: bold;
      }
-     #search-control {
-       font-size: 10px;
+     .search-control {
+       font-size: 0.8em;
      }
 		</style>
 		<script src="http://www.google.com/jsapi?key=ABQIAAAALdPZknikp68JRKPSzmMLehRKnc5teGLG99lMmU39x6OLP16D9RR3AMp8BHfCEZFYjnzEALG4JUDatQ" type="text/javascript"></script>
