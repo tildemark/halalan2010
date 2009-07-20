@@ -11,7 +11,7 @@ author_location="Davao City, Philippines"
 author_email="tildemark@gmail.com"
 screenshot="http://img0.gmodules.com/ig/images/no_image/no_image_gadget_thm.png"
 thumbnail="http://img0.gmodules.com/ig/images/no_image/no_image_gadget_thm.png"
-height="150"
+height="250"
 scrolling="true"
 render_inline="optional"
 category="news">
@@ -82,7 +82,7 @@ category="news">
 //      localSearch.setCenterPoint("New York, NY");
 
 			// tell the searcher to draw itself in tabbed mode
-			drawOptions.setDrawMode(google.search.SearchControl.DRAW_MODE_TABBED);
+			drawOptions.setDrawMode(google.search.searchControl.DRAW_MODE_TABBED);
 			searchControl.draw(document.getElementById("searchcontrol"), drawOptions);
 
       // Tell the searcher to draw itself and tell it where to attach
