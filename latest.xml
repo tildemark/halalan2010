@@ -70,6 +70,8 @@ category="news">
     function OnLoad() {
       // Create a search control
       var searchControl = new google.search.SearchControl();
+      var drawOptions = new google.search.DrawOptions();
+
 
       // Add in a full set of searchers
 //      var localSearch = new google.search.LocalSearch();
