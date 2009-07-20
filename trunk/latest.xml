@@ -68,37 +68,30 @@ category="news">
 		google.load("search", "1");
 
     function OnLoad() {
-      // Create a search control
-      var searchControl = new google.search.SearchControl();
-      var drawOptions = new google.search.DrawOptions();
+        // create a tabbed mode search control
+        var tabbed = new google.search.SearchControl();
 
+        tabbed.addSearcher(new google.search.LocalSearch());
+        tabbed.addSearcher(new google.search.WebSearch());
+        tabbed.addSearcher(new google.search.BlogSearch());
+        tabbed.addSearcher(new google.search.NewsSearch());
+        tabbed.addSearcher(new google.search.BookSearch());
+        tabbed.addSearcher(new google.search.PatentSearch());
 
-      // Add in a full set of searchers
-//      var localSearch = new google.search.LocalSearch();
-//      searchControl.addSearcher(localSearch);
-      searchControl.addSearcher(new google.search.NewsSearch());
-      searchControl.addSearcher(new google.search.VideoSearch());
-      searchControl.addSearcher(new google.search.BlogSearch());
+        // draw in tabbed layout mode
+        var drawOptions = new google.search.DrawOptions();
+        drawOptions.setDrawMode(google.search.SearchControl.DRAW_MODE_TABBED);
+        tabbed.draw(document.getElementById("search_control_tabbed"), drawOptions);
 
-      // Set the Local Search center point
-//      localSearch.setCenterPoint("New York, NY");
-
-			// tell the searcher to draw itself in tabbed mode
-			drawOptions.setDrawMode(google.search.searchControl.DRAW_MODE_TABBED);
-			searchControl.draw(document.getElementById("searchcontrol"), drawOptions);
-
-      // Tell the searcher to draw itself and tell it where to attach
-//      searchControl.draw(document.getElementById("searchcontrol"));
-
-      // Execute an inital search
-      searchControl.execute("Philippines Elections");
-    }
-    google.setOnLoadCallback(OnLoad);
+        tabbed.execute("Ferrari Enzo");
+      }
+      google.setOnLoadCallback(OnLoad, true);
+    //]]>
     </script>
-
-    <div id="searchcontrol">Loading...</div>
-
-     ]]>
+    <div style="text-align: right; color=#676767; margin-bottom: 8px;">
+      <a href="http://code.google.com/apis/ajaxsearch/index.html"><span style="color:#676767; cursor: pointer; text-decoration: underline;">Google AJAX Search API Documentation</span></a>
+    </div>
+    <div class="search-control" id="search_control_tabbed">Loading</div>
 
   </Content> 
 </Module>
