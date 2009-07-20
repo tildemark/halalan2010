@@ -72,20 +72,20 @@ category="news">
       var searchControl = new google.search.SearchControl();
 
       // Add in a full set of searchers
-      var localSearch = new google.search.LocalSearch();
-      searchControl.addSearcher(localSearch);
-      searchControl.addSearcher(new google.search.WebSearch());
+//      var localSearch = new google.search.LocalSearch();
+//      searchControl.addSearcher(localSearch);
+      searchControl.addSearcher(new google.search.NewsSearch());
       searchControl.addSearcher(new google.search.VideoSearch());
       searchControl.addSearcher(new google.search.BlogSearch());
 
       // Set the Local Search center point
-      localSearch.setCenterPoint("New York, NY");
+//      localSearch.setCenterPoint("New York, NY");
 
       // Tell the searcher to draw itself and tell it where to attach
       searchControl.draw(document.getElementById("searchcontrol"));
 
       // Execute an inital search
-      searchControl.execute("Google");
+      searchControl.execute("Philippines Elections");
     }
     google.setOnLoadCallback(OnLoad);
     </script>
