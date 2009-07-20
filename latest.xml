@@ -4,7 +4,7 @@
 title="Halalan News"
 directory_title="Halalan News"
 title_url="http://halalan2010.googlecode.com/"
-description="__MSG_description__"
+description="2010 Philippine National Elections"
 author="Tildemark"
 author_affiliation="PPCRV"
 author_location="Davao City, Philippines"
@@ -61,8 +61,37 @@ category="news">
 </ModulePrefs>
 
   <Content type="html">
+
      <![CDATA[ 
-       Hello, world!
+		<script src="http://www.google.com/jsapi?key=ABQIAAAALdPZknikp68JRKPSzmMLehRKnc5teGLG99lMmU39x6OLP16D9RR3AMp8BHfCEZFYjnzEALG4JUDatQ" type="text/javascript"></script>
+		<script language="Javascript" type="text/javascript">
+		google.load("search", "1");
+
+    function OnLoad() {
+      // Create a search control
+      var searchControl = new google.search.SearchControl();
+
+      // Add in a full set of searchers
+      var localSearch = new google.search.LocalSearch();
+      searchControl.addSearcher(localSearch);
+      searchControl.addSearcher(new google.search.WebSearch());
+      searchControl.addSearcher(new google.search.VideoSearch());
+      searchControl.addSearcher(new google.search.BlogSearch());
+
+      // Set the Local Search center point
+      localSearch.setCenterPoint("New York, NY");
+
+      // Tell the searcher to draw itself and tell it where to attach
+      searchControl.draw(document.getElementById("searchcontrol"));
+
+      // Execute an inital search
+      searchControl.execute("Google");
+    }
+    google.setOnLoadCallback(OnLoad);
+    </script>
+
+    <div id="searchcontrol">Loading...</div>
+
      ]]>
 
   </Content> 
