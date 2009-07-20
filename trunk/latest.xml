@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs
-title="Halalan News"
-directory_title="Halalan News"
+title="2010 Halalan News"
+directory_title="2010 Philippine National Elections"
 title_url="http://www.ppcrv.org/"
-description="2010 Philippine National Elections"
+description="Get the lastest infomation about the 2010 Philippine national elections. Watch the videos and read the news and surf the blogs about the latest election events."
 author="Tildemark"
 author_affiliation="PPCRV"
 author_location="Davao City, Philippines"
@@ -14,7 +14,8 @@ thumbnail="http://img0.gmodules.com/ig/images/no_image/no_image_gadget_thm.png"
 height="300"
 scrolling="true"
 render_inline="optional"
-category="news">
+category="politics"
+category2="news">
 
 <Locale messages="ajaxsearch_content/en.xml"/>
 <Locale lang="ar" messages="ajaxsearch_content/ar.xml"/>
