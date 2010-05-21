@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs
+title="2010 Halalan News"
+directory_title="2010 Philippine National Elections"
+title_url="http://www.ppcrv.org/"
+description="Get the lastest infomation about the 2010 Philippine national elections. Watch the videos and read the news and surf the blogs about the latest election events."
+author="Tildemark"
+author_affiliation="PPCRV"
+author_location="Davao City, Philippines"
+author_email="tildemark@gmail.com"
+screenshot="http://halalan2010.googlecode.com/svn/trunk/images/halalannews.jpg"
+thumbnail="http://halalan2010.googlecode.com/svn/trunk/images/ppcrvseal1.jpg"
+height="300"
+scrolling="true"
+render_inline="optional"
+category="politics"
+category2="news">
+
+<Locale messages="ajaxsearch_content/en.xml"/>
+<Locale lang="ar" messages="ajaxsearch_content/ar.xml"/>
+<Locale lang="bg" messages="ajaxsearch_content/bg.xml"/>
+<Locale lang="ca" messages="ajaxsearch_content/ca.xml"/>
+<Locale lang="cs" messages="ajaxsearch_content/cs.xml"/>
+<Locale lang="da" messages="ajaxsearch_content/da.xml"/>
+<Locale lang="de" messages="ajaxsearch_content/de.xml"/>
+<Locale lang="el" messages="ajaxsearch_content/el.xml"/>
+<Locale lang="es" messages="ajaxsearch_content/es.xml"/>
+<Locale lang="et" messages="ajaxsearch_content/et.xml"/>
+<Locale lang="fi" messages="ajaxsearch_content/fi.xml"/>
+<Locale lang="fil" messages="ajaxsearch_content/tl.xml"/>
+<Locale lang="fr" messages="ajaxsearch_content/fr.xml"/>
+<Locale lang="hi" messages="ajaxsearch_content/hi.xml"/>
+<Locale lang="hr" messages="ajaxsearch_content/hr.xml"/>
+<Locale lang="hu" messages="ajaxsearch_content/hu.xml"/>
+<Locale lang="hy" messages="ajaxsearch_content/hy.xml"/>
+<Locale lang="id" messages="ajaxsearch_content/id.xml"/>
+<Locale lang="is" messages="ajaxsearch_content/is.xml"/>
+<Locale lang="it" messages="ajaxsearch_content/it.xml"/>
+<Locale lang="ja" messages="ajaxsearch_content/ja.xml"/>
+<Locale lang="ko" messages="ajaxsearch_content/ko.xml"/>
+<Locale lang="lt" messages="ajaxsearch_content/lt.xml"/>
+<Locale lang="lv" messages="ajaxsearch_content/lv.xml"/>
+<Locale lang="ms" messages="ajaxsearch_content/ms.xml"/>
+<Locale lang="nl" messages="ajaxsearch_content/nl.xml"/>
+<Locale lang="no" messages="ajaxsearch_content/no.xml"/>
+<Locale lang="pl" messages="ajaxsearch_content/pl.xml"/>
+<Locale lang="pt-pt" messages="ajaxsearch_content/pt-pt.xml"/>
+<Locale lang="ro" messages="ajaxsearch_content/ro.xml"/>
+<Locale lang="ru" messages="ajaxsearch_content/ru.xml"/>
+<Locale lang="sk" messages="ajaxsearch_content/sk.xml"/>
+<Locale lang="sl" messages="ajaxsearch_content/sl.xml"/>
+<Locale lang="sr" messages="ajaxsearch_content/sr.xml"/>
+<Locale lang="sv" messages="ajaxsearch_content/sv.xml"/>
+<Locale lang="th" messages="ajaxsearch_content/th.xml"/>
+<Locale lang="tl" messages="ajaxsearch_content/tl.xml"/>
+<Locale lang="tr" messages="ajaxsearch_content/tr.xml"/>
+<Locale lang="uk" messages="ajaxsearch_content/uk.xml"/>
+<Locale lang="vi" messages="ajaxsearch_content/vi.xml"/>
+<Locale lang="zh-CN" messages="ajaxsearch_content/zh-cn.xml"/>
+<Locale lang="zh-TW" messages="ajaxsearch_content/zh-tw.xml"/>
+</ModulePrefs>
+<UserPref name="title" display_name="Halalan News" default_value="Halalan News"/>
+<UserPref name="tabFontSize" display_name="Tab Font Size" default_value="0.7em"/>
+
+  <Content type="html">
+
+     <![CDATA[ 
+     <style type="text/css">
+     #news-title {
+       font-size: 0.8em;
+       font-width: bold;
+     }
+     .search-control {
+       font-size: 0.8em;
+     }
+		</style>
+		<script src="http://www.google.com/jsapi?key=ABQIAAAALdPZknikp68JRKPSzmMLehRKnc5teGLG99lMmU39x6OLP16D9RR3AMp8BHfCEZFYjnzEALG4JUDatQ" type="text/javascript"></script>
+		<script language="Javascript" type="text/javascript">
+		google.load("search", "1");
+
+    function OnLoad() {
+        // create a tabbed mode search control
+        var tabbed = new google.search.SearchControl();
+
+        tabbed.addSearcher(new google.search.NewsSearch());
+        tabbed.addSearcher(new google.search.WebSearch());
+        tabbed.addSearcher(new google.search.BlogSearch());
+        tabbed.addSearcher(new google.search.VideoSearch());
+
+        // draw in tabbed layout mode
+        var drawOptions = new google.search.DrawOptions();
+        drawOptions.setDrawMode(google.search.SearchControl.DRAW_MODE_TABBED);
+        tabbed.draw(document.getElementById("search_control_tabbed"), drawOptions);
+
+        tabbed.execute("Philippines Election");
+      }
+      google.setOnLoadCallback(OnLoad, true);
+    </script>
+    <div id="news-title" style="text-align: center; color=#676767; margin-bottom: 8px;">
+      <a href="http://www.ppcrv.org/page/index.htm"><span style="color:#676767; cursor: pointer; text-decoration: underline;">Latest updates on the 2010 Philippine Elections</span></a>
+    </div>
+    <div class="search-control" id="search_control_tabbed">Fetching News</div>
+
+    ]]>
+  </Content> 
+</Module>
